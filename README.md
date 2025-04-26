@@ -7,11 +7,17 @@ Based on official docker images for [PostgreSQL] and [Metabase].
 
 ## Usage
 
-- Clone this repository.
-- Start services locally using Docker Compose.
-
+- Clone this repository ( "git clone ...")
+- Run script "dir_setter.sh". This script adds empty dirs to pg-data to avoid postgresql container errors:
   ```shell
-  $ docker compose up
+  $ chmod u+x dir_setter.sh
+  ```
+  ```shell
+  $ ./dir_setter.sh
+  ```
+- Start services locally using Docker Compose:
+  ```shell
+  $ docker compose up -d --build
   ```
 - Open your browser on [localhost:3000](http://localhost:3000)
 ## References
